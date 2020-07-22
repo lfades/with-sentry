@@ -22,8 +22,6 @@ MyError.getInitialProps = async ({ res, err, asPath }) => {
     err,
   })
 
-  console.log('ERROR ERROR', errorInitialProps)
-
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
   // getInitialProps has run
   errorInitialProps.hasGetInitialPropsRun = true

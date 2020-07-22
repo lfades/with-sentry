@@ -37,7 +37,11 @@ module.exports = withSourceMaps({
       config.resolve.alias['@sentry/node'] = '@sentry/browser';
     }
 
-    console.log('COMMIT', VERCEL_GITHUB_COMMIT_SHA);
+    console.log('COMMIT', {
+      SENTRY_DSN,
+      SENTRY_ORG,
+      SENTRY_PROJECT,
+    });
 
     // When all the Sentry configuration env variables are available/configured
     // The Sentry webpack plugin gets pushed to the webpack plugins to build
